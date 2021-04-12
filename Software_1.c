@@ -1,6 +1,6 @@
 /*
 
-Software 1
+Software 1 (Script Refinado)
 
 Objetivo:
 Na ginástica olímpica as notas de uma equipe são dadas assim: seis atletas fazem seus
