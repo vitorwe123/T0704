@@ -14,18 +14,19 @@ correspondentes aos atletas e apresenta a nota geral da equipe
 
 /*
 O método check tem como objetivo evitar possíveis casos indesejados 
-para o funcionamento do programa e aletar ao usuário sobre o problema.
+para o funcionamento do programa e alertar ao Usuário sobre o problema.
 
 O método check tem como parâmetro um float n, e esse será utilizado
-através da variável p1, p2, p3 ou t, referentes às notas do aluno, atribuídas pelo usuário.
+através da variável nota_1, nota_2, nota_3, nota_4, nota_5, nota_6,
+referentes às notas da equipe, atribuídas pelo Usuário.
 
 O método check erá utilizado no decorrer do programa para
 verificar se o valor atribuído pelo input à variável se encontra dentro
 do intervalo desejado [0;10]. 
 
-Se n > 10, o programa imprime a mensagem "A nota máxima por prova é 10." e encerra seu funcionamento.
+Se n > 10, o programa imprime a mensagem "Dígito invalido. A nota máxima é 10." e encerra seu funcionamento.
 
-Se n < 0, o programa imprime a mensagem "A nota mínima por prova é 0." e encerra seu funcionamento.
+Se n < 0, o programa imprime a mensagem "Dígito invalido. A nota mínima é 0." e encerra seu funcionamento.
 */
 
 float check(float n) {
@@ -55,10 +56,10 @@ Média.
 
 
 
-Parte 2, Interagindo com o usuário:
-Logo após, são escritos os comandos referentes a interação com o usuário.
+Parte 2, Interagindo com o Usuário:
+Logo após, são escritos os comandos referentes a interação com o Usuário.
 
-São impressas instruções ao usuário para que o mesmo insira as notas, e,
+São impressas instruções ao Usuário para que o mesmo insira as notas, e,
 logo em seguida, o programa lê o input e atribui seu valor à variável correspondente.
 
 Para concluir a interação, após cada valor inserido pelo Usuário, é utilizado o método check, já descrito anteriormente,
@@ -71,7 +72,7 @@ Nessa parte, o software vai realizar todas operações matemáticas
 a fim de obter o resultado desejado.
 
 A fim de refinar o código da Máquina, inicializamos uma array para armazenar
-todas as notas (float ou int) obtidas através do usuário.
+todas as notas (float ou int) obtidas através do Usuário.
 
 Logo após, inicializamos o For Loop, um laço do tipo for para interagir entre as variáveis nota_n e a, b, c, d.
 
@@ -87,7 +88,7 @@ Projetamos uma visualização sofisticada do algoritma da Máquina. Acesse <dire
 
 
 Parte 4, Interação com o Usuário:
-Na última parte, informamos ao usuário as quatro maiores notas.
+Na última parte, informamos ao Usuário as quatro maiores notas.
 Logo após, imprimimos a média aritmética entre as quatro maiores notas, calculada pela Máquina.
 
 
@@ -114,29 +115,29 @@ int main(void) {
 
   // Parte 2, Interação com o Usuário e Coleta de Dados
 
-  printf("Digite, respectivamente, a nota de cada integrante da equipe:\n"); // Imprime a instrução ao usuário.
+  printf("Digite, respectivamente, a nota de cada integrante da equipe:\n"); // Imprime a instrução ao Usuário.
   
-  printf("Atleta 1: "); // Imprime a instrução ao usuário.
+  printf("Atleta 1: "); // Imprime a instrução ao Usuário.
   scanf(" %f", &nota_1); // Atribuição do valor inserido à variável nota_1.
   check(nota_1); // Confere se 0 <= nota_1 <= 10.
 
-  printf("Atleta 2: "); // Imprime a instrução ao usuário.
+  printf("Atleta 2: "); // Imprime a instrução ao Usuário.
   scanf(" %f", &nota_2); // Atribuição do valor inserido à variável nota_2.
   check(nota_2); // Confere se 0 <= nota_2 <= 10.
 
-  printf("Atleta 3: "); // Imprime a instrução ao usuário.
+  printf("Atleta 3: "); // Imprime a instrução ao Usuário.
   scanf(" %f", &nota_3); // Atribuição do valor inserido à variável nota_3.
   check(nota_3); // Confere se 0 <= nota_3 <= 10.
 
-  printf("Atleta 4: "); // Imprime a instrução ao usuário.
+  printf("Atleta 4: "); // Imprime a instrução ao Usuário.
   scanf(" %f", &nota_4); // Atribuição do valor inserido à variável nota_4.
   check(nota_4); // Confere se 0 <= nota_4 <= 10.
 
-  printf("Atleta 5: "); // Imprime a instrução ao usuário.
+  printf("Atleta 5: "); // Imprime a instrução ao Usuário.
   scanf(" %f", &nota_5); // Atribuição do valor inserido à variável nota_5.
   check(nota_5); // Confere se 0 <= nota_5 <= 10.
 
-  printf("Atleta 6: "); // Imprime a instrução ao usuário.
+  printf("Atleta 6: "); // Imprime a instrução ao Usuário.
   scanf(" %f", &nota_6); // Atribuição do valor inserido à variável nota_6.
   check(nota_6); // Confere se 0 <= nota_6 <= 10.
 
@@ -158,7 +159,7 @@ int main(void) {
 
 
 
-  // Parte 4, Interação com o Usuário
+  // Parte 4, Interação final com o Usuário
 
   printf(mi_notas, a, b, c, d); // Informa as Quatro Maiores Notas ao o Usuário, através de uma Mensagem de Interação.
   printf(mi_media, m); // Informa a Média da Equipe ao Usuário, através de uma Mensagem de Interação.

@@ -15,7 +15,7 @@ aluno qual nota ele deve tirar para ter média sete
 
 /*
 O método check tem como objetivo evitar possíveis casos indesejados 
-para o funcionamento do programa e aletar ao Usuário sobre o problema. 
+para o funcionamento do programa e alertar ao Usuário sobre o problema. 
 
 O método check tem como parâmetro um float n, e esse será utilizado
 através da variável p1, p2, p3 ou t, referentes às notas do aluno, atribuídas pelo Usuário.
@@ -24,23 +24,23 @@ O método check erá utilizado no decorrer do programa para
 verificar se o valor atribuído pelo input à variável se encontra dentro
 do intervalo desejado [0;10]. 
 
-Se n > 10, o programa imprime a mensagem "A nota máxima por prova é 10." e encerra seu funcionamento.
-Se n < 0, o programa imprime a mensagem "A nota mínima por prova é 0." e encerra seu funcionamento..
+Se n > 10, o programa imprime a mensagem "Dígito invalido. A nota máxima é 10." e encerra seu funcionamento.
+
+Se n < 0, o programa imprime a mensagem "Dígito invalido. A nota mínima é 0." e encerra seu funcionamento.
 */
 
 float check(float n) {
   if(n > 10) { // Checa se a nota inserida é maior que 10.
-    printf("\nA nota máxima por prova é 10."); // Imprime aviso na tela.
+    printf("\nDígito invalido. A nota máxima é 10."); // Imprime aviso na tela.
     exit(0); // Encerra o programa.
   }
   if(n < 0) { // Checa se a nota inserida é menor que 0.
-    printf("\nA nota mínima por prova é 0."); // Imprime aviso na tela.
+    printf("\nDígito invalido. A nota mínima é 0."); // Imprime aviso na tela.
     exit(0);  // Encerra o programa.
   }
   
   return 0;
 }
-
 
 /* 
 O método main executa a principal função do programa (descrita no topo do programa).
@@ -129,7 +129,7 @@ atráves de uma Mensagem de interação, e o programa encerrará normalmente.
 */
 int main(void) {
 
-  // Parte 1, Declarando as Variáveis.
+  // Parte 1, Declarando as Variáveis
   
   float p1, p2, p3, t; // Prova 1, Prova 2, Prova 3 e Trabalho;
   float m; // Média avaliativa;
@@ -148,7 +148,7 @@ int main(void) {
   
   
 
-  // Parte 2, Interagindo com o Usuário e Coleta de Dados.
+  // Parte 2, Interação com o Usuário e Coleta de Dados
   
   printf("\nSistema de Verificação de Notas Avaliativas\n"); // Título do Sistema.
 
@@ -197,7 +197,7 @@ int main(void) {
 
   
   
-  // Parte 4, Decisão final do Usuário.
+  // Parte 4, Decisão final com o Usuário
   
   printf("%s", mi_decide); // Pergunta ao Usuário sobre sua decisão, atráves de uma Mensagem de Interação (mi_decide).
   scanf("%d", &d); // Atribuímos à variável d o valor inserido pelo Usuário.

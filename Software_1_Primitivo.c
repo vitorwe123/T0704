@@ -14,10 +14,11 @@ correspondentes aos atletas e apresenta a nota geral da equipe
 
 /*
 O método check tem como objetivo evitar possíveis casos indesejados 
-para o funcionamento do programa e aletar ao Usuário sobre o problema.
+para o funcionamento do programa e alertar ao Usuário sobre o problema.
 
 O método check tem como parâmetro um float n, e esse será utilizado
-através da variável p1, p2, p3 ou t, referentes às notas do aluno, atribuídas pelo Usuário.
+através da variável nota_1, nota_2, nota_3, nota_4, nota_5, nota_6,
+referentes às notas da equipe, atribuídas pelo Usuário.
 
 O método check erá utilizado no decorrer do programa para
 verificar se o valor atribuído pelo input à variável se encontra dentro
@@ -174,7 +175,7 @@ int main() {
   
   
 
-  // Parte 4, Interação com o Usuário
+  // Parte 4, Interação final com o Usuário
   
   printf(mi_notas, a, b, c, d); // Informa as Quatro Maiores Notas ao o Usuário, através de uma Mensagem de Interação.
   printf(mi_media, m); // Informa a Média da Equipe ao Usuário, através de uma Mensagem de Interação.
