@@ -1,4 +1,7 @@
 /*
+
+Software 2
+
 Objetivo:
 Escreva um programa que recebe as quatro notas da avaliação de um aluno (três provas e
 uma nota de trabalho) e apresenta os seguintes resultados:
@@ -12,10 +15,10 @@ aluno qual nota ele deve tirar para ter média sete
 
 /*
 O método check tem como objetivo evitar possíveis casos indesejados 
-para o funcionamento do programa e aletar ao usuário sobre o problema. 
+para o funcionamento do programa e aletar ao Usuário sobre o problema. 
 
 O método check tem como parâmetro um float n, e esse será utilizado
-através da variável p1, p2, p3 ou t, referentes às notas do aluno, atribuídas pelo usuário.
+através da variável p1, p2, p3 ou t, referentes às notas do aluno, atribuídas pelo Usuário.
 
 O método check erá utilizado no decorrer do programa para
 verificar se o valor atribuído pelo input à variável se encontra dentro
@@ -45,19 +48,23 @@ O método main executa a principal função do programa (descrita no topo do pro
 Parte 1, Declarando as variáveis:
 Nas primeiras linhas são criadas todas as variáveis que serão necessárias ao longo do programa:
 
-prova 1, prova 2, prova 3, trabalho;
-média;
-nota requerida; 
-mensagens de interação;
-variável decide.
+Notas do Aluno;
+Média;
+Nota Requerida; 
+Mensagens de Interação;
+Variável Decide.
 
 
-Parte 2, Interagindo com o usuário:
-Logo após, são escritas os comandos referentes a interação com o usuário.
-São impressas instruções ao usuário para que o mesmo insira as notas, e,
+
+Parte 2, Interação com o Usuário e Coleta de Dados:
+Logo após, são escritos os comandos referentes a interação com o Usuário.
+
+São impressas instruções ao Usuário para que o mesmo insira as notas, e,
 logo em seguida, o programa lê o input e atribui seu valor à variável correspondente.
-Para concluir a interação, é utilizado o método check, já descrito anteriormente,
-para checar a validade dos valores inseridos pelo usuário (e avisá-lo, caso necessário).
+
+Para concluir a interação, após cada valor inserido pelo Usuário, é utilizado o método check, já descrito anteriormente,
+para checar sua validade (e avisar o Usuário, caso necessário).
+
 
 
 Parte 3, Trabalho da Máquina:
@@ -67,24 +74,24 @@ a fim de obter o resultado desejado.
 Nesse momento, nosso programa tomará um entre dois rumos:
 
 Rumo A: se t != 0, trabalho já realizado
-Rumo B: se t = 0, ou seja, usuário não realizou o trabalho ainda.
+Rumo B: se t = 0, ou seja, Usuário não realizou o trabalho ainda.
 
 Rumo A:
 No enunciado do programa, afirmamos que, se a nota do trabalho for igual a 0,
 o programa entende como se o mesmo ainda teria sido realizado. 
-Logo, informaremos a nota que o usuário necessita tirar nesse trabalho,
+Logo, informaremos a nota que o Usuário necessita tirar nesse trabalho,
 a fim de atingir média 7.
 Por isso, começamos a fazer os cálculos dentro de uma condição (t != 0),
-ou seja, o usuário já realizou o trabalho.
+ou seja, o Usuário já realizou o trabalho.
 
 Calculamos a média aritmética utilizando as variáveis p1, p2, p3, e t e a atribuimos à variável m.
-Informamos a média avaliativa ao usuário, em uma formatação de duas casas decimais (.2f).
-Logo depois, caso o usuário não atinja a média 7 (m < 7), informamos o usuário atráves
+Informamos a média avaliativa ao Usuário, em uma formatação de duas casas decimais (.2f).
+Logo depois, caso o Usuário não atinja a média 7 (m < 7), informamos o Usuário atráves
 de uma Mensagem de interação. Caso contrário (m >= 7), informamos
-o usuário através de uma Mensagem de interaçao.
+o Usuário através de uma Mensagem de interaçao.
 
 Rumo B:
-Nesse caso, como o trabalho ainda não foi realizado, informaremos ao usuário
+Nesse caso, como o trabalho ainda não foi realizado, informaremos ao Usuário
 a nota necessária no trabalho para atingir a média 7.
 
 Utilizaremos a variável req (nota quererida) para receber o valor
@@ -94,35 +101,40 @@ entre 4 valores, isolando a variável não declarada).
 Caso o valor necessário for maior do que 10 (req > 10), 
 informaremos ao soldado a nota necessária para atingir a média 7
 e que chegou ao fim da linha, e ele irá rodar.
-Porém, se req < 10, informaremos ao usuário a nota necessária (req),
+Porém, se req < 10, informaremos ao Usuário a nota necessária (req),
 a fim de atingir a média 7.
 
-Parte 4, Decisão final do Usuário:
-Na última parte, perguntamos ao usuário se ele deseja encerrar o programa
+
+
+
+Parte 4, Interação com o Usuário:
+Na última parte, perguntamos ao Usuário se ele deseja encerrar o programa
 ou realizar o processo novamente.
 
 1. Reiniciar Programa
 0. Sair
 
-Essa decisão dependerá do input do usuário. Para isso,
+Essa decisão dependerá do input do Usuário. Para isso,
 utilizamos o switch, e atribuímos a variável d (decide), o valor
-passado pelo usuário.
+passado pelo Usuário.
 
 Se d = 1, chamamos a função main() e o programa "reiniciará".
-Se d = 0, apenas informamos ao usuário que o programa foi encerrado,
+Se d = 0, apenas informamos ao Usuário que o programa foi encerrado,
 utilizando uma Mensagem de interação, e o programa encerrará normalmente.
-Se d != 1 e d != 0, informaremos ao usuário que sobre o input inválido,
+Se d != 1 e d != 0, informaremos ao Usuário que sobre o input inválido,
 atráves de uma Mensagem de interação, e o programa encerrará normalmente.
+
+
 
 */
 int main(void) {
 
-  // Parte 1, Declarando as variáveis.
+  // Parte 1, Declarando as Variáveis.
   
   float p1, p2, p3, t; // Prova 1, Prova 2, Prova 3 e Trabalho;
   float m; // Média avaliativa;
   float req; // Média requerida para o Trabalho;
-  int d; // Dígito de decisão
+  int d; // Dígito de decisão.
   
   // Mensagens de Interação
   char mi_mediabaixo[32] = "\nVocê está abaixo da média\n";
@@ -136,39 +148,39 @@ int main(void) {
   
   
 
-  // Parte 2, Interagindo com o usuário.
+  // Parte 2, Interagindo com o Usuário e Coleta de Dados.
   
   printf("\nSistema de Verificação de Notas Avaliativas\n"); // Título do Sistema.
 
-  printf("\nInsira a nota da Prova 01: "); // Imprime a instrução ao usuário.
+  printf("\nInsira a nota da Prova 01: "); // Imprime a instrução ao Usuário.
   scanf("%f", &p1); // Atribuição do valor inserido à variável p1.
   check(p1); // Confere se 0 <= p1 <= 10.
 
-  printf("\nInsira a nota da Prova 02: "); // Imprime a instrução ao usuário.
+  printf("\nInsira a nota da Prova 02: "); // Imprime a instrução ao Usuário.
   scanf("%f", &p2); // Atribuição do valor inserido à variável p2.
   check(p2); // Confere se 0 <= p2 <= 10.
 
-  printf("\nInsira a nota da Prova 03: "); // Imprime a instrução ao usuário.
+  printf("\nInsira a nota da Prova 03: "); // Imprime a instrução ao Usuário.
   scanf("%f", &p3); // Atribuição do valor inserido à variável p3.
   check(p3); // Confere se 0 <= p3 <= 10.
   
-  printf("\nInsira a nota do Trabalho: "); // Imprime a instrução ao usuário.
+  printf("\nInsira a nota do Trabalho: "); // Imprime a instrução ao Usuário.
   scanf("%f", &t); // Atribuição do valor inserido à variável t.
   check(t); // Confere se 0 <= t <= 10.
   
   
   
-  // Parte 3, Trabalho da Máquina.
+  // Parte 3, Trabalho da Máquina
   
   if(t != 0) { // Rumo A
 
-    m = (p1+p2+p3+t) / 4; // Calcula a Média (atribuição do valor à variável m)
+    m = (p1+p2+p3+t) / 4; // Calcula a Média (atribuição do valor à variável m).
 
     printf("\n");
-    printf("A média avaliativa foi de %.2f", m); // Informa ao usuário sua média avaliativa.
+    printf("A média avaliativa foi de %.2f", m); // Informa ao Usuário sua média avaliativa.
     
-    if (m < 7) { printf("%s", mi_mediabaixo); } // Avisa ao usuário se ele reprovou (m < 7), atráves de uma Mensagem de Interação (mi_mediabaixo).
-    else { printf("%s", mi_aprovado); } // Avisa ao usuário se ele aprovou (m >= 7), atráves de uma Mensagem de Interação (mi_aprovado).
+    if (m < 7) { printf("%s", mi_mediabaixo); } // Avisa ao Usuário se ele reprovou (m < 7), atráves de uma Mensagem de Interação (mi_mediabaixo).
+    else { printf("%s", mi_aprovado); } // Avisa ao Usuário se ele aprovou (m >= 7), atráves de uma Mensagem de Interação (mi_aprovado).
 
   } else { // Rumo B
 
@@ -187,11 +199,11 @@ int main(void) {
   
   // Parte 4, Decisão final do Usuário.
   
-  printf("%s", mi_decide); // Pergunta ao usuário sobre sua decisão, atráves de uma Mensagem de Interação (mi_decide).
-  scanf("%d", &d); // Atribuímos à variável d o valor inserido pelo usuário.
+  printf("%s", mi_decide); // Pergunta ao Usuário sobre sua decisão, atráves de uma Mensagem de Interação (mi_decide).
+  scanf("%d", &d); // Atribuímos à variável d o valor inserido pelo Usuário.
   switch(d) { // Utilizamos o switch pra verificar os diferentes casos 0, 1, e default.
-    case 0: printf("%s", mi_final); break; // Caso o usuário insira 0, o programa é encerrado, atráves de uma Mensagem de Interação (mi_final).
-    case 1: main(); break; // Caso o usuário insira 1, chamamos a função main() e "reiniciamos o programa".
+    case 0: printf("%s", mi_final); break; // Caso o Usuário insira 0, o programa é encerrado, atráves de uma Mensagem de Interação (mi_final).
+    case 1: main(); break; // Caso o Usuário insira 1, chamamos a função main() e "reiniciamos o programa".
     default: printf("%s", mi_invalid); break; // Caso insira outro valor, informamos a invalidez do dígito, atráves de uma Mensagem de Interação (mi_invalid), e encerramos o programa normalmente.
   }
 
